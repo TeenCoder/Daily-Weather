@@ -20,6 +20,7 @@ function getWeather(){
             temp.innerHTML = `${json.main.temp}.C`;
             minMaxTemp.innerHTML = `Min.${json.main.temp_min}     Max.${json.main.temp_max}`;
             humidity.innerHTML = `Humidity.${json.main.humidity}%`;
+            figureWeather(json);
         });
 }
 
