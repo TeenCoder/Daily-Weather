@@ -1,7 +1,7 @@
 body {
-    background: #1f4037;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #99f2c8, #1f4037);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #99f2c8, #1f4037); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #3C3B3F;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #605C3C, #3C3B3F);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #605C3C, #3C3B3F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
 }
 
 h1 {
@@ -10,6 +10,12 @@ h1 {
 
 h4 {
     font-size: 20pt;
+}
+
+h6 {
+    font-size: 15pt;
+    bottom: 10px;
+    right: 10px;
 }
 
 .main-weather {
@@ -57,7 +63,7 @@ h4 {
 }
 
 .weather-div {
-    font-family: 'Staatliches', 'Jua', sans-serif;
+    font-family: 'Song Myung', 'Jua', sans-serif;
     text-shadow: 2px 2px 4px #000000;
     text-align: center;
     animation: fadeIn 3s linear;
