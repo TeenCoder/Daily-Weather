@@ -1,4 +1,5 @@
 const API_KEY = '88b38985502a5cd4e55297d3bfe8dcee',
+    LOCATION = 'Seoul',
     bodyContainer = document.querySelector('body'),
     weatherDiv = document.querySelector('.weather-div'),
     mainWeather = weatherDiv.querySelector('.main-weather'),
@@ -27,13 +28,17 @@ const KoreanPatch = [
     {
         weather: 'Clear',
         description: '맑음'
+    },
+    {
+        weather: 'Snow',
+        description: '눈'
     }
 ];
 
 let currentWeather = '';
 
 function getWeather(){
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=Mokdong&appid=${API_KEY}&units=metric`
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${LOCATION}&appid=${API_KEY}&units=metric`
     )
         .then(function(response){
             return response.json();
@@ -55,11 +60,13 @@ function figureWeather(json){
     bodyContainer.classList.add(currentWeather);
     const koreanDes = KoreanPatch.filter(koreanDes => koreanDes.weather === currentWeather);
     console.log(koreanDes);
-    if (koreanDes[0].description !== null){
+    if (koreanDes.length === 0){
+        errorCont.innerHTML = `errorcode1 - undefined weather '${json.weather[0].main}' - 카페에 제보해 주세요^^`
+    } if (koreanDes[0].description !== null) {
         console.log(koreanDes[0].description);
         mainWeather.innerHTML = `${koreanDes[0].description}`
     } else {
-        errorCont.innerHTML = `undefined weather - ${json.weather[0].main} - 카페에 제보해 주세요^^`
+        errorCont.innerHTML = `errorcode2`;
     }
 }
 

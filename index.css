@@ -1,21 +1,15 @@
+.weather-div {
+    font-family: 'Song Myung', 'Jua', sans-serif;
+    text-shadow: 2px 2px 4px #000000;
+    text-align: center;
+    animation: fadeIn 3s linear;
+    color: white;
+}
+
 body {
     background: #3C3B3F;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #605C3C, #3C3B3F);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #605C3C, #3C3B3F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
-}
-
-h1 {
-    font-size: 80pt;
-}
-
-h4 {
-    font-size: 20pt;
-}
-
-h6 {
-    font-size: 15pt;
-    bottom: 10px;
-    right: 10px;
 }
 
 .main-weather {
@@ -62,10 +56,23 @@ h6 {
     background: linear-gradient(to right, #0ABFBC, #FC354C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.weather-div {
-    font-family: 'Song Myung', 'Jua', sans-serif;
-    text-shadow: 2px 2px 4px #000000;
-    text-align: center;
-    animation: fadeIn 3s linear;
-    color: white;
+.Snow {
+    background: #74ebd5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1 {
+    font-size: 80pt;
+}
+
+h4 {
+    font-size: 20pt;
+}
+
+h6 {
+    position: fixed;
+    font-size: 15pt;
+    bottom: 0px;
+    right: 10px;
 }
